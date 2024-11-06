@@ -1,0 +1,170 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000; 
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 50px;
+    position: absolute;
+    top: 0;
+}
+
+.logo {
+    font-size: 28px;
+    color: #dbff00;
+}
+
+.back-home {
+    font-size: 16px;
+    color: #060606;
+    background: #dbff00;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #dbff00;
+    border-radius: 10px;
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+}
+
+.back-home:hover {
+    color: #dbff00;
+    background-color: #000;
+    transform: scale(1.05);
+}
+
+/* Highlight Line */
+.highlight-line {
+    width: 95%;
+    height: 6px;
+    background-color: #dbff00;
+    margin-top: 80px;
+    border-radius: 20px;
+}
+
+/* Description Section */
+.description {
+    text-align: center;
+    margin-top: 20px;
+    padding: 0 20px;
+    color: #ffffff;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 35px;
+    max-width: 1000px;
+    line-height: 1.2;
+}
+
+/* Video Section */
+.video-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 1200px;
+    height: 100vh;
+    padding-top: 20px;
+}
+
+.video-content {
+    width: 100%;
+    max-width: 800px;
+    max-height: 60vh;
+    border-radius: 10px;
+    object-fit: cover;
+    outline: none;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    border: 2px solid #dbff00;
+}
+
+.book-call {
+    font-size: 25px;
+    background-color: #dbff00;
+    color: #000;
+    text-decoration: none;
+    padding: 15px 50px;
+    border-radius: 10px;
+    margin-top: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    animation: light-glow 2s ease-in-out infinite;
+}
+
+.book-call:hover {
+    background-color: #0a0a0a;
+    color: #dbff00;
+    transform: scale(1.05);
+    border: 2px solid #dbff00;
+}
+
+@keyframes light-glow {
+    0% {
+        box-shadow: 0 0 5px rgba(219,255,0,0.5), 0 0 10px rgba(219,255,0,0.5), 0 0 10px rgba(219,255,0,0.5);
+    }
+    50% {
+        box-shadow: 0 0 10px rgba(219,255,0,0.5), 0 0 15px rgba(219,255,0,0.5), 0 0 20px rgba(219,255,0,0.5);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(219,255,0,0.5), 0 0 10px rgba(219,255,0,0.5), 0 0 15px rgba(219,255,0,0.5);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .header{
+        padding: 20px 20px;
+    }
+    .logo {
+        font-size: 20px;
+    }
+    .back-home {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+    .description {
+        font-size: 1.5rem;
+        padding: 0 10px;
+    }
+    .book-call {
+        margin-top: 30px;
+        font-size: 20px;
+        padding: 15px 50px;
+    }
+    .video-content {
+        max-height: 50vh;
+    }
+}
+
+@media (min-width:390px) and (max-width:430px) {
+    .description {
+        font-size: 1.8rem;
+        padding: 0 10px;
+        padding-top: 40px;
+    }
+  
+    .video-content{
+        margin-top: -50px;
+        margin-bottom: 20px;
+    }
+    .book-call {
+        margin-top: 30px;
+        font-size: 20px;
+        padding: 20px 70px;
+    }
+
+}
